@@ -2,12 +2,13 @@ import styled from 'styled-components';
 
 const Wrapper = styled.div`
   nav {
-    width: 100vw;
+    margin: 0 auto;
+    width: min(100%, 1400px);
     height: auto;
     position: fixed;
-    left: 0;
+    left: 50%;
+    transform: translateX(-50%);
     top: 0;
-
     padding: 20px 0;
   }
 

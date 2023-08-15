@@ -34,22 +34,28 @@
 
 body,
 html {
-  background: #000;
   height: 100%;
   overflow: hidden;
 }
 
 #root {
-  background: #ad1d1d;
-  min-height: 100vh;
-  min-width: 100vw;
+  height: 100vh;
+  overflow-y: scroll;
+  scroll-snap-type: y mandatory;
 }
 
+.mains {
+  margin: 0 auto;
+  width: min(100%, 1200px);
+}
+
+
 main {
-  height: 100vh;
   width: 100%;
+  height: 100vh;
+  /* 100% of viewport height */
+  scroll-snap-align: start;
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
 }
