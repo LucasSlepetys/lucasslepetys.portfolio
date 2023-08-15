@@ -1,31 +1,12 @@
 import React from 'react';
 import styled from 'styled-components';
-import { FaFacebook, FaInstagram, FaLinkedin, FaGithub } from 'react-icons/fa6';
+import { socialLinks } from '../links';
 
 const SocialLinks = () => {
-  const links = [
-    {
-      URL: '',
-      icon: <FaFacebook className='icon' />,
-    },
-    {
-      URL: '',
-      icon: <FaInstagram className='icon' />,
-    },
-    {
-      URL: '',
-      icon: <FaLinkedin className='icon' />,
-    },
-    {
-      URL: '',
-      icon: <FaGithub className='icon' />,
-    },
-  ];
-
   return (
     <Wrapper>
       <div className='social-links'>
-        {links.map((link, index) => {
+        {socialLinks.map((link, index) => {
           const { URL, icon } = link;
           return (
             <ul key={index}>

@@ -1,32 +1,32 @@
 import styled from 'styled-components';
 
-const Wrapper = styled.div`
-  aside {
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 0%;
-    overflow: hidden;
-    height: 100vh;
-    background: var(--color-quaternary);
-    z-index: 10;
+const Wrapper = styled.aside`
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 0%;
+  overflow: hidden;
+  height: 100vh;
+  background: var(--color-quaternary);
+  z-index: 10;
 
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
-  aside .side-center {
+  transition: var(--transition-width);
+
+  .side-center {
     width: 50%;
   }
 
-  aside .links {
+  .links {
     display: flex;
     flex-direction: column;
     align-items: center;
   }
 
-  aside .links .link {
+  .links .link {
     text-decoration: none;
     color: var(--color-tertiary);
     font-weight: 100;
@@ -34,7 +34,7 @@ const Wrapper = styled.div`
     font-size: 3.4rem;
   }
 
-  aside .close-side {
+  .close-side {
     position: absolute;
     right: 20px;
     top: 20px;
@@ -59,15 +59,9 @@ const Wrapper = styled.div`
     color: var(--color-black);
   }
 
-  @media screen and (max-width: 680px) {
-    aside {
-      transition: var(--transition-width);
-    }
-
-    .open {
-      width: 100%;
-      transition: var(--transition-width);
-    }
+  @media screen and (min-width: 680px) {
+    transition: none;
+    width: 0% !important;
   }
 `;
 

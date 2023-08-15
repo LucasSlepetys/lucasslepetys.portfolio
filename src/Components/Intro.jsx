@@ -1,10 +1,11 @@
 import React from 'react';
-import SocialLinks from '../Components/SocialLinks';
+import SocialLinks from './SocialLinks';
 import picture from '../assets/lucas.jpg';
+import Wrapper from '../Wrappers/main';
 
-export function Presentation() {
+function Intro() {
   return (
-    <main>
+    <Wrapper>
       <div className='center-div'>
         <div className='main-title'>
           <div className='upperline' />
@@ -22,6 +23,8 @@ export function Presentation() {
           <img src={picture} alt='Me, Lucas' className='img' />
         </div>
       </div>
-    </main>
+    </Wrapper>
   );
 }
+
+export default Intro;

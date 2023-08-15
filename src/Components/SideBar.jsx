@@ -9,30 +9,29 @@ import {
 } from 'react-icons/fa6';
 import Wrapper from '../Wrappers/sidebar';
 import SocialLinks from './SocialLinks';
+import { pageLinks } from '../links';
 
 const SideBar = ({ isSideOpen, openCloseSideBar }) => {
   return (
-    <Wrapper>
-      <aside className={isSideOpen ? 'open' : ''}>
-        <div className='side-center'>
-          <div className='links'>
-            <Link to='/' className='link'>
-              Home
-            </Link>
-            <Link to='/' className='link'>
-              About
-            </Link>
-            <Link to='/' className='link'>
-              Projects
-            </Link>
-            <Link to='/' className='link'>
-              Contact
-            </Link>
-          </div>
-          <SocialLinks className='socialLinks' />
+    <Wrapper style={isSideOpen ? { width: '100%' } : { width: '0%' }}>
+      <div className='side-center'>
+        <div className='links'>
+          {pageLinks.map((link, index) => {
+            return (
+              <Link
+                key={index}
+                to={link.to}
+                className='link'
+                onClick={openCloseSideBar}
+              >
+                {link.name}
+              </Link>
+            );
+          })}
         </div>
-        <FaXmark className='close-side' onClick={openCloseSideBar} />
-      </aside>
+        <SocialLinks className='socialLinks' />
+      </div>
+      <FaXmark className='close-side' onClick={openCloseSideBar} />
     </Wrapper>
   );
 };
