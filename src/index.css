@@ -43,7 +43,28 @@ html,
   min-height: 80vh;
 }
 
+.title {
+  text-align: center;
+  width: 60%;
+  margin: 0 auto;
+}
+
+.title p {
+  font-size: 4rem;
+  font-weight: 700;
+}
+
+.title .underline {
+  margin: 0 auto;
+}
+
+.underline {
+  border: 2px solid var(--color-secondary);
+  width: 80px;
+}
+
 .fixed-nav {
   background: var(--color-white);
   box-shadow: var(--shadow-nav-bar);
 }
+

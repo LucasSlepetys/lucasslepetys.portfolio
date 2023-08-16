@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import { socialLinks } from '../links';
+import { socialLinks } from '../data';
 
 const SocialLinks = () => {
   return (

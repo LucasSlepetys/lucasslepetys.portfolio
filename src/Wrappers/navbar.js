@@ -8,6 +8,7 @@ const Wrapper = styled.nav`
   transform: translateX(-50%);
   top: 0;
   padding: 20px 0;
+  transition: all 0.2s ease-in-out;
 
   z-index: 1000;
 

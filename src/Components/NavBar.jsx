@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { FaAlignJustify } from 'react-icons/fa';
 import Wrapper from '../Wrappers/navbar';
-import { pageLinks } from '../links';
+import { pageLinks } from '../data';
 
 const SideBar = ({ openCloseSideBar }) => {
   const [stickyClass, setStickyClass] = useState('');
@@ -16,7 +16,7 @@ const SideBar = ({ openCloseSideBar }) => {
     if (window !== undefined) {
       let windowHeight = window.scrollY;
       // window height changed for the demo
-      windowHeight > 150 ? setStickyClass('fixed-nav') : setStickyClass('');
+      windowHeight > 50 ? setStickyClass('fixed-nav') : setStickyClass('');
     }
   };
 

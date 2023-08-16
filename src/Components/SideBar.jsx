@@ -1,15 +1,9 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import {
-  FaXmark,
-  FaFacebook,
-  FaInstagram,
-  FaLinkedin,
-  FaGithub,
-} from 'react-icons/fa6';
+import { FaXmark } from 'react-icons/fa6';
 import Wrapper from '../Wrappers/sidebar';
 import SocialLinks from './SocialLinks';
-import { pageLinks } from '../links';
+import { pageLinks } from '../data';
 
 const SideBar = ({ isSideOpen, openCloseSideBar }) => {
   return (
