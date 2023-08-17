@@ -1,10 +1,11 @@
 import React from 'react';
 import testIMG from '../assets/lucas.jpg';
 import { FaHouseUser, FaGithub } from 'react-icons/fa';
+import Wrapper from '../Wrappers/projects';
 
 const Projects = () => {
   return (
-    <div className='projects-container'>
+    <Wrapper>
       <div className='title-container'>
         <div className='title'>
           <p>My Projects</p>
@@ -41,7 +42,7 @@ const Projects = () => {
             })}
         </div>
       </div>
-    </div>
+    </Wrapper>
   );
 };
 
