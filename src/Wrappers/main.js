@@ -66,7 +66,7 @@ const Wrapper = styled.main`
 
   .center-div .img-border {
     position: relative;
-    height: 80%;
+    height: 90%;
     width: auto;
     margin: auto 20px;
   }
