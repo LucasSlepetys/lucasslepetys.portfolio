@@ -1,5 +1,5 @@
 import React from 'react';
-import testIMG from '../assets/lucas.jpg';
+import testIMG from '../assets/testIMG.png';
 import { FaHouseUser, FaGithub } from 'react-icons/fa';
 import Wrapper from '../Wrappers/projects';
 
@@ -14,7 +14,7 @@ const Projects = () => {
       </div>
       <div className='projects-center'>
         <div className='projects'>
-          {Array(3)
+          {Array(4)
             .fill(null)
             .map((_, index) => {
               return (
