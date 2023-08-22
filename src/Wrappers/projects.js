@@ -77,7 +77,13 @@ const Wrapper = styled.div`
           --margin-sides: 1rem;
 
           .name {
-            max-width: 45%;
+            text-decoration: none;
+            display: inline-block;
+
+            color: var(--color-black);
+
+            max-width: 85%;
+
             margin: 40px var(--margin-sides) 0 var(--margin-sides);
 
             font-size: 1.4rem;
@@ -108,8 +114,18 @@ const Wrapper = styled.div`
             color: var(--color-secondary);
             transition: 0.1s all ease-out;
 
-            :hover {
-              color: var(--color-primary);
+            &:hover {
+              color: var(--color-primary) !important;
+            }
+
+            a {
+              text-decoration: none;
+              display: inline-block;
+              color: var(--color-secondary);
+
+              &:hover {
+                color: var(--color-primary) !important;
+              }
             }
           }
 

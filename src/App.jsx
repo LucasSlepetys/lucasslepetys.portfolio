@@ -1,5 +1,6 @@
 import { RouterProvider, createBrowserRouter } from 'react-router-dom';
 import { About, HomePage, Landing, Projects, Contact } from './Pages';
+import { loader as projectsLoader } from './Pages/Projects';
 
 const router = createBrowserRouter([
   {
@@ -17,6 +18,7 @@ const router = createBrowserRouter([
       {
         path: 'Projects',
         element: <Projects />,
+        loader: projectsLoader,
       },
       {
         path: 'contact',

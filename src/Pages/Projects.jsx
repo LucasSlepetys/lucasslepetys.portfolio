@@ -2,8 +2,32 @@ import React from 'react';
 import testIMG from '../assets/testIMG.png';
 import { FaHouseUser, FaGithub } from 'react-icons/fa';
 import Wrapper from '../Wrappers/projects';
+import { createClient } from 'contentful';
+import { useLoaderData } from 'react-router-dom';
+
+const client = createClient({
+  space: import.meta.env.VITE_SPACE_ID,
+  environment: 'master',
+  accessToken: import.meta.env.VITE_CONTENT_API,
+});
+
+export const loader = async (data) => {
+  const response = await client.getEntries({ content_type: 'projects' });
+  console.log(response);
+  const projects = response.items.map((item) => {
+    const { title, image, sourceCode, description } = item.fields;
+    const url = item.fields?.url;
+    const id = item.sys.id;
+    const img = image?.fields?.file?.url;
+    return { title, url, id, img, sourceCode, description };
+  });
+
+  return { projects };
+};
 
 const Projects = () => {
+  const { projects } = useLoaderData();
+
   return (
     <Wrapper>
       <div className='title-container'>
@@ -14,32 +38,29 @@ const Projects = () => {
       </div>
       <div className='projects-center'>
         <div className='projects'>
-          {Array(4)
-            .fill(null)
-            .map((_, index) => {
-              return (
-                <div key={index} className='project'>
-                  <div className='img-container'>
-                    <img src={testIMG} alt='Lucas' />
+          {projects.map((project) => {
+            const { title, url, id, img, sourceCode, description } = project;
+            return (
+              <div key={id} className='project'>
+                <div className='img-container'>
+                  <img src={img} alt='Lucas' />
+                </div>
+                <div className='info-container'>
+                  <a className='name' href={url}>
+                    {title}
+                  </a>
+                  <p className='text'>{description}</p>
+                  <div className='source'>
+                    <FaGithub />
+                    <a href={sourceCode}>Source Code</a>
                   </div>
-                  <div className='info-container'>
-                    <p className='name'>Project Name</p>
-                    <p className='text'>
-                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                      Enim placeat repellat voluptatem reiciendis aspernatur
-                      quisquam ea hic, sapiente atque eius?
-                    </p>
-                    <div className='source'>
-                      <FaGithub />
-                      <p>Source Code</p>
-                    </div>
-                    <div className='icon-container'>
-                      <FaHouseUser className='icon' />
-                    </div>
+                  <div className='icon-container'>
+                    <FaHouseUser className='icon' />
                   </div>
                 </div>
-              );
-            })}
+              </div>
+            );
+          })}
         </div>
       </div>
     </Wrapper>

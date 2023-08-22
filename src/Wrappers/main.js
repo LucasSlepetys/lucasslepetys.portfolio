@@ -65,10 +65,19 @@ const Wrapper = styled.main`
   }
 
   .center-div .img-border {
+    --radius: 15px;
     position: relative;
-    height: 90%;
-    width: auto;
     margin: auto 20px;
+
+    /* width: fit-content; */
+    max-height: 100%;
+    aspect-ratio: 0.679;
+
+    //for bigger screens:
+    max-width: 400px;
+
+    //for smaller height screens:
+    min-height: 400px;
   }
 
   .center-div .img-border .border {
@@ -78,14 +87,17 @@ const Wrapper = styled.main`
     border: 4px solid var(--color-secondary);
     height: 100%;
     width: 100%;
-    border-radius: 15px;
+    border-radius: var(--radius);
   }
 
   .center-div .img-border img {
-    height: 100%;
-    width: auto;
-    border-radius: 15px;
+    max-height: 100%;
+    height: auto;
+    max-width: 100%;
+
+    border-radius: var(--radius);
     filter: brightness(120%);
+    box-shadow: 0px 5px 80px 0px;
   }
 
   @media screen and (max-width: 680px) {

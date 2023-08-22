@@ -62,6 +62,14 @@ export const events = [
     year: 2021,
     text: 'Fully back to school, now fluent in English, started learning Javascript and CSS.',
   },
+  {
+    year: 2022,
+    text: 'Started the IB, learning and creating applications with Java, Javascript, Python and CSS ',
+  },
+  {
+    year: 2023,
+    text: 'Final year in school (passed IB), completed Gym App for school + many Java application and taking advanced courses on AI, React and CSS.',
+  },
 ];
 
 export const services = [

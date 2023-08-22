@@ -52,10 +52,10 @@ const Wrapper = styled.div`
   .center .text {
     text-wrap: wrap;
     top: 25%;
-    font-size: 1.4rem;
+    font-size: 1.5rem;
     color: var(--color-tertiary);
     width: min(100%, 1200px);
-    line-height: 2.3rem;
+    line-height: 2.97rem;
   }
 
   @media screen and (max-width: 600px) {
