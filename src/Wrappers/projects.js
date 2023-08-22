@@ -5,6 +5,7 @@ const Wrapper = styled.div`
   flex-direction: column;
 
   .title-container {
+    margin-top: 100px;
     position: relative;
     background-color: var(--color-quaternary);
     height: 40vh;

@@ -16,6 +16,10 @@ const Contact_CSS = styled.div`
       width: fit-content;
       --font-size: 6rem;
     }
+
+    @media screen and (min-height: 900px) {
+      margin-top: 100px;
+    }
   }
 
   .info {
@@ -30,6 +34,10 @@ const Contact_CSS = styled.div`
         cursor: pointer;
         text-decoration: none;
       }
+    }
+
+    @media screen and (min-height: 900px) {
+      margin-top: 40px;
     }
   }
 `;

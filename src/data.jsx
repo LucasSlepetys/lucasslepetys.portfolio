@@ -24,19 +24,19 @@ export const pageLinks = [
 
 export const socialLinks = [
   {
-    URL: '',
+    URL: 'https://www.instagram.com/lucasslepetys/',
     icon: <FaFacebook className='icon' />,
   },
   {
-    URL: '',
+    URL: 'https://www.instagram.com/lucasslepetys/',
     icon: <FaInstagram className='icon' />,
   },
   {
-    URL: '',
+    URL: 'https://www.linkedin.com/in/lucas-slepetys-261a66282/',
     icon: <FaLinkedin className='icon' />,
   },
   {
-    URL: '',
+    URL: 'https://github.com/LucasSlepetys/',
     icon: <FaGithub className='icon' />,
   },
 ];

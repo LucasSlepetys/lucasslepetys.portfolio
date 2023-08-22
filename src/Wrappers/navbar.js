@@ -2,6 +2,7 @@ import styled from 'styled-components';
 
 const Wrapper = styled.nav`
   height: auto;
+  min-height: 100px;
   width: 100%;
   position: fixed;
   left: 50%;
@@ -11,6 +12,10 @@ const Wrapper = styled.nav`
   transition: all 0.2s ease-in-out;
 
   z-index: 1000;
+
+  @media screen and (max-height: 600px) {
+    background: var(--color-white);
+  }
 
   .nav-center {
     margin: 10px auto;

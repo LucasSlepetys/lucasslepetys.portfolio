@@ -9,6 +9,7 @@ const Wrapper = styled.div`
   background-color: var(--bg-color);
 
   .center {
+    margin-top: 100px;
     width: min(80%, 1000px);
     margin: 100px 0 50px 0;
     display: flex;

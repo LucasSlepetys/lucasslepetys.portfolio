@@ -43,6 +43,7 @@ html,
   min-height: 80vh;
 }
 
+
 .title {
   --font-size: 4rem;
   --width: 80px;
@@ -50,7 +51,6 @@ html,
   width: fit-content;
   text-align: center;
   margin: 0 auto;
-  ;
 }
 
 .title p {

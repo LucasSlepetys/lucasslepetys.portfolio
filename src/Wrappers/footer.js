@@ -1,12 +1,14 @@
 import styled from 'styled-components';
 const FooterWrap = styled.footer`
-  height: 20%;
+  /* @media screen and (max-height: 600px) {
+    display: none;
+  } */
+
+  height: 20vh;
+  min-height: 200px;
   width: 100%;
 
   z-index: -100;
-
-  bottom: 0;
-  left: 0;
 
   background: var(--color-black-shaded);
 
