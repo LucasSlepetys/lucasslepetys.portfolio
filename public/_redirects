@@ -1,1 +1,3 @@
+# Redirect all requests to index.html, except for sitemap.xml
 /* /index.html 200
+!/*.xml /:splat 200
