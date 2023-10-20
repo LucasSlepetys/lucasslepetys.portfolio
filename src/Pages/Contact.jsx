@@ -1,9 +1,19 @@
 import React from 'react';
 import Contact_CSS from '../Wrappers/contact';
+import { Helmet } from 'react-helmet-async';
 
 const Contact = () => {
   return (
     <Contact_CSS>
+      <Helmet>
+        <title>Contact</title>
+        <meta
+          name='description'
+          content='Contact Lucas Rodrigues Slepetys via email or other means or social medias.'
+        />
+        <link rel='canonical' href='/contact' />
+      </Helmet>
+
       <div className='title-container'>
         <div className='title'>
           <p>Contact</p>

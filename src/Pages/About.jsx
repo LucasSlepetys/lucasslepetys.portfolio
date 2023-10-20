@@ -1,11 +1,21 @@
 import React, { useState } from 'react';
 import Wrapper from '../Wrappers/about';
+import { Helmet } from 'react-helmet-async';
 
 const About = () => {
   const [isExtra, setIsExtra] = useState(false);
 
   return (
     <Wrapper>
+      <Helmet>
+        <title>About</title>
+        <meta
+          name='description'
+          content='A little about Lucas Rodrigues Slepetys.'
+        />
+        <link rel='canonical' href='/about' />
+      </Helmet>
+
       <div className='center'>
         <div className='about-me'>
           <p onClick={() => setIsExtra(!isExtra)}>

@@ -4,6 +4,7 @@ import { FaHouseUser, FaGithub } from 'react-icons/fa';
 import Wrapper from '../Wrappers/projects';
 import { createClient } from 'contentful';
 import { useLoaderData } from 'react-router-dom';
+import { Helmet } from 'react-helmet-async';
 
 const client = createClient({
   space: import.meta.env.VITE_SPACE_ID,
@@ -30,6 +31,11 @@ const Projects = () => {
 
   return (
     <Wrapper>
+      <Helmet>
+        <title>Projects</title>
+        <meta name='description' content='Find all of Lucas projects here!' />
+        <link rel='canonical' href='/projects' />
+      </Helmet>
       <div className='title-container'>
         <div className='title'>
           <p>My Projects</p>
