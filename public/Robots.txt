@@ -1,4 +1,4 @@
-# https://www.robotstxt.org/robotstxt.htmt
+# https://www.robotstxt.org/robotstxt.html
 User-agent: *
 Sitemap: https://lucaslepetys-portfolio.netlify.app/sitemap_index.xml
 Disallow: 
