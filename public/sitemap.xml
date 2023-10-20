@@ -1,4 +1,19 @@
-https://lucaslepetys-portfolio.netlify.app/
-https://lucaslepetys-portfolio.netlify.app/about
-https://lucaslepetys-portfolio.netlify.app/projects
-https://lucaslepetys-portfolio.netlify.app/contact
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url>
+    <loc>https://lucaslepetys-portfolio.netlify.app/</loc>
+    <lastmod>2023-10-20</lastmod>
+  </url>
+  <url>
+    <loc>https://lucaslepetys-portfolio.netlify.app/about</loc>
+    <lastmod>2023-10-20</lastmod>
+  </url>
+  <url>
+    <loc>https://lucaslepetys-portfolio.netlify.app/projects</loc>
+    <lastmod>2023-10-20</lastmod>
+  </url>
+  <url>
+    <loc>https://lucaslepetys-portfolio.netlify.app/contact</loc>
+    <lastmod>2023-10-20</lastmod>
+  </url>
+</urlset>
